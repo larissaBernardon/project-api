@@ -28,6 +28,6 @@ App.use(middleware.validaToken);
 App.use('/api/restaurante', routeRestaurante);
 App.use('/api/users', routeUser);
 
-App.listen(port, () => {
+App.listen(process.env.PORT || port, () => {
     console.log(`Ativo na porta: ${port}`);
 });
